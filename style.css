@@ -5,7 +5,7 @@
 
     /* color mode */
     --title-color:hsl(0,0%,100%);
-    --text-color:hsl(0,0%,60);
+    --text-color:hsl(0, 0%, 60%);
     --body-color:hsl(0,0%,0);
 
 
@@ -50,6 +50,8 @@ body{
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    background-color: black;
+    color: azure;
 }
 
 .header{
@@ -58,7 +60,7 @@ body{
     top:0;
     left: 0;
     background-color: var(--body-color);
-    border-bottom: 1px solid var(--text-color);
+    /* border-bottom: 1px solid var(--text-color); */
     z-index: var(--z-fixed);
 }
 
@@ -67,9 +69,44 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+}
+
+.nav_logo{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 3px;
+}
+
+.nav_toggle,
+.nav_close{
+    font-size: 1.25rem;
+    color: var(--tittle-color);
+    cursor: pointer;
+
 }
 
 
+/* NAVIGATION MENU FOR MOBILE DEVICES  */
+
+
+@media screen and (max-width:1023px){
+    .nav_menu{
+        position: fixed;
+        top: o;
+        left: 0;
+        background-color: var(--body-color);
+        border-bottom: 1px solid  var(--text-color);
+        width: 100%;
+        padding-block: 4.5rem 3.5rem;
+        transition: top 2s;
+    }
+}
+
+.nav_list{
+    display: flex;
+    flex-direction: column;
+}
 
 
 ul{
